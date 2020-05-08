@@ -1,0 +1,19 @@
+version: "3"
+services:
+  everfit:
+    volumes:
+      - ./:/app
+    container_name: everfit_api
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
+    links:
+      - redis-server
+      - mongo
+  mongo:
+    container_name: everfit-mongodb
+    image: "mongo"
+  redis-server:
+    container_name: everfit-redis
+    image: "redis:4.0.11"
