@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json ./
 
 # Run npm install - install the npm dependencies
-RUN npm install
+RUN npm install --no-cache
 
 # Copy application source
 # COPY . /app
