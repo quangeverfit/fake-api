@@ -32,6 +32,8 @@ pipeline {
           sh "cp $envfile .env"
           sh "cat .env"
         }
+        sh 'docker --version'
+        sh 'docker-compose --version'
         sh 'bash ./ci/jenkin.sh'
       }
     }
