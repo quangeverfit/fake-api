@@ -2,4 +2,10 @@
 
 cd $(dirname $0)
 cd ../
-ls -al
+
+
+# Build image
+docker-compose build
+
+# Up image
+docker-compose up -d
