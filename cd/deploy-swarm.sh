@@ -8,7 +8,6 @@ echo "Docker host $MANAGER_HOST"
 echo "Env: $PROJECT_ENV"
 
 # Dump service definition
-ls -al
 docker-compose -f "docker-compose.$PROJECT_ENV.yml" config > "docker-stack-$PROJECT_ENV.yml"
 cat docker-stack-$PROJECT_ENV.yml
 
