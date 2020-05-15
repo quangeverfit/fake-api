@@ -13,6 +13,13 @@ services:
     depends_on:
       - redis
       - mongo
+    deploy:
+      mode: replicated
+      replicas: 3
+      update_config:
+        order: start-first
+      rollback_config:
+        order: start-first
   
   mongo:
     image: "mongo"
