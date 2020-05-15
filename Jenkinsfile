@@ -38,7 +38,7 @@ pipeline {
     IMAGE_TAG             = "${BUILD_NUMBER}.${IMAGE_TAG_DATE}"
     IMAGE_URL_WITHOUT_VER = "$IMAGE_REPOSITORY_URL/everfit-demo-$REPO_NAMESPACE/api"
 
-    MANAGER_HOST          = credentials("MANAGER_HOST_${projectEnv.ttoUpperCase()}")
+    MANAGER_HOST          = credentials("MANAGER_HOST_${projectEnv.toUpperCase()}")
 
     PROJECT_ENV           = "${projectEnv}"
   }

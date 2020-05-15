@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd $(dirname $0)
-cd ../
+cd ../cd
 
 echo "Image tag $IMAGE_TAG"
 echo "Docker host $MANAGER_HOST"
