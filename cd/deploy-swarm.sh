@@ -8,7 +8,8 @@ echo "Docker host $MANAGER_HOST"
 echo "Env: $PROJECT_ENV"
 
 # Dump service definition
-docker-compose -f docker-compose.$PROJECT_ENV.yml config > docker-stack-$PROJECT_ENV.yml
+ls -al
+docker-compose -f "docker-compose.$PROJECT_ENV.yml" config > "docker-stack-$PROJECT_ENV.yml"
 cat docker-stack-$PROJECT_ENV.yml
 
 # Connect to docker swarm
