@@ -57,6 +57,12 @@ pipeline {
         sh 'bash ./ci/push.sh'
       }
     }
+
+    stage('Deploy') {
+      steps {
+        sh 'bash ./ci/push.sh'
+      }
+    }
   }
   post { 
     always { 

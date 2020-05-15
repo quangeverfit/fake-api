@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 services:
   api:
     image: 'everfit-demo-api:latest'
@@ -14,6 +14,9 @@ services:
     ports:
       - 3000:3000
     links:
+      - redis
+      - mongo
+    depends_on:
       - redis
       - mongo
   
