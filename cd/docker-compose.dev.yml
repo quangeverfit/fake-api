@@ -1,7 +1,7 @@
 version: "3"
 services:
   api:
-    image: "${IMAGE_REPOSITORY_URL}/everfit-demo-$REPO_NAMESPACE/api:${IMAGE_TAG}"
+    image: "${IMAGE_REPOSITORY_URL}/everfit-demo-${REPO_NAMESPACE}/api:${IMAGE_TAG}"
     command: "sh run.sh"
     env_file:
       - ../.env
