@@ -68,7 +68,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh "bash ./cd/deploy-swarm.sh"
+        sh 'bash ./cd/deploy-swarm.sh'
       }
     }
   }

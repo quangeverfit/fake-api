@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  api:
+    image: "$IMAGE_REPOSITORY_URL/everfit-demo-$REPO_NAMESPACE/api:$IMAGE_TAG"
+    command: "sh run.sh"
+    env_file:
+      - ./.env
+    ports:
+      - 3000:3000
+    links:
+      - redis
+      - mongo
+    depends_on:
+      - redis
+      - mongo
+  
+  mongo:
+    container_name: everfit-mongodb
+    image: "mongo"
+    ports:
+      - 27017:27017
+
+  redis:
+    container_name: everfit-redis
+    image: "redis:4.0.11"
+    ports:
+      - 6379:6379
