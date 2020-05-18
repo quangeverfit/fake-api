@@ -18,3 +18,4 @@ docker push $IMAGE_URL
 
 # Remove image 
 docker image rm everfit-demo-api:latest -f
+docker image rm $IMAGE_URL -f
