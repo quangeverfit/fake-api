@@ -15,3 +15,6 @@ docker tag everfit-demo-api:latest $IMAGE_URL
 
 # Push image with specfic version
 docker push $IMAGE_URL
+
+# Remove image 
+docker image rm everfit-demo-api:latest -f
